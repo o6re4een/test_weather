@@ -125,12 +125,12 @@ export default {
     },
     
     getWeatherData() {
-      fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${this.getCityCoord()[0]}&lon=${this.getCityCoord()[1]}&appid=${process.env.VUE_APP_OPEN_WEATHER_API}&units=metric`)
+      fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${this.getCityCoord()[0]}&lon=${this.getCityCoord()[1]}&appid=f0859c7d2039eed0464bd527040b7b79&units=metric`)
         .then(data => data.json())
         .then(data => { this.weatherData = data }).catch(error => this.fetchError = error);
     },
     getTwoWeekForeCast() {
-      fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${this.getCityCoord()[0]}&lon=${this.getCityCoord()[1]}&appid=${process.env.VUE_APP_OPEN_WEATHER_API}&units=metric`).then(data => data.json()).then(data => { this.weatherForecastData = data, this.transaformResponse() }).catch(error => this.fetchError = error);
+      fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${this.getCityCoord()[0]}&lon=${this.getCityCoord()[1]}&appid=f0859c7d2039eed0464bd527040b7b79&units=metric`).then(data => data.json()).then(data => { this.weatherForecastData = data, this.transaformResponse() }).catch(error => this.fetchError = error);
     }
 
   },
